@@ -39,3 +39,28 @@ console.log(string.startsWith('ikimiz'))//true
 //endsWith('') şununla bitiyormu true-false
 console.log(string.endsWith('ikimiz'))//false
 console.log(string.endsWith('değiliz'))//true
+//search kelimenin konumunu veriyor
+let sevmek = 'I love you baby'
+console.log(sevmek.search('love'))//2
+console.log(sevmek.search('/you/gi')) // /g büyük küçük harfe takılmıyor
+
+// match.('') grup, index, input
+let yorgunum = 'başım sürekli ağrıdığı için artık bütün hayatımı etkiliyor.\
+başım artık ağrımasın diye sürekli ağrı kesici içiyorum.'
+console.log(yorgunum.match('başım'))
+console.log(yorgunum.match(/başım/))
+console.log(yorgunum.match(/başım/g))
+
+// checking data types veri tiplerinin değiştirilmesi
+console.log(typeof null)
+
+// changing data type bir veri türünü başka bir veri türünedeğiştirme
+/* strin to int 
+tırnakalr içerisindeki herhangi bir sayı string sayısı olarak geçer.
+typeof '5' string
+typeof 5 number
+typeof parseInt('5') number
+typeof number('4') number
+typeof +('2') number
+typeof perseFloat('5.5') */
+
