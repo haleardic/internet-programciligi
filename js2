@@ -1,0 +1,41 @@
+//split('')=diziye çeviriyor
+//reverse()=tersten yazıyor
+// join birleştiriyor
+console.log(diziyedonme.split(''))// diziye çeviriyor
+console.log(diziyedonme.split())
+console.log(diziyedonme.split('').reverse())
+console.log(diziyedonme.split('').reverse().join())
+
+//trim() başlangıç ve sondaki boşlukları kaldırıyor
+console.log(diziyedonme.trim())
+
+//includes('a') içinde olup olmadığına bakıyor true-false
+console.log(diziyedonme.includes('a'))//büyük küçük harf fark ediyor
+
+//replace('enektarlar', 'anahtar')
+//replace(sadece ilk kelimedekini değiştirir)
+console.log(diziyedonme.replace('enektarlar','anahtarlar'))
+
+//replaceAll(içindeki tüm kelimeleri değiştirir)
+console.log(diziyedonme.replaceAll('anahtarlar', 'enektarlar'))
+
+//charAt(0) 0. elemanın değerini yazdırtıyor
+console.log(diziyedonme.charAt('e'))
+
+//charCodeAt(0) ASCI tablosundaki değerini yazdırtıyor
+console.log(diziyedonme.charCodeAt('e'))
+
+//indexof('a') kaçıncı satırda olduğunu yazdırtıyor
+console.log(diziyedonme.indexOf('e'))
+
+//lastIndexOf('') en sonuncu kelimenin değerini getiriyor
+let string = 'ikimiz bir fidanın güller açan dalıyız ikimiz dal değiliz'
+console.log(string.lastIndexOf('ikimiz'))
+
+//startWith('') başlangıcı true-false
+console.log(string.startsWith('bir'))//false
+console.log(string.startsWith('ikimiz'))//true
+
+//endsWith('') şununla bitiyormu true-false
+console.log(string.endsWith('ikimiz'))//false
+console.log(string.endsWith('değiliz'))//true
