@@ -1,0 +1,100 @@
+//console.log('bu yazı introduction.js den geldi')
+console.log( typeof 'HALE')
+console.log( typeof 6)
+console.log( typeof true)
+console.log( typeof null)
+console.log( typeof undefiend)
+/* let name
+let getFirstSurname */
+let youtubeChannel = 'hale'
+let channelAge = 25
+let isCannelStillActive = true
+let secondChannnel = null
+let channelMone = undefined
+console.log(youtubeChannel, channelAge)
+
+const PI = 3.14
+console.log( PI)
+
+//eşit mi değil mi
+let numOne = 3
+let numTwo = 3
+console.log( numOne == numTwo)
+
+let js = 'Javascript'
+let py = 'Python'
+console.log( js == py)
+
+//diziler
+let nums = [0, 'haloş', 3, undefined,[]]
+nums[0] // 0
+nums[1] // haloş
+nums[2] // 3
+console.log(nums)
+
+let nums1 = [1, 2, 3]
+let nums2 = [1, 2, 3]
+console.log( nums1 == nums2) //false döner
+// dizileri, fonksiyonları, nesneleri karşılaştıramazsın
+let nums3 = [5,6,7]
+let nums4 = nums3 // ancak bu şekilde eşit olabilir 
+//Math object
+ console.log(Math.floor(PI)) //3 aşşağı yuvarlama
+ console.log(Math.ceil(PI)) //4 yukarı yuvarlama
+ console.log(Math.round(9.81)) //10
+ //round da noktadan sonra 5 ise yukarı yuvarlar
+ console.log(Math.min(1, 2, -5))//sayı kümesindeki en küçük sayıyı bulur
+ console.log(Math.max(50, 2, 100))// sayı kümesindeki en yüksek sayıyı bulur
+ const randNum = Math.random() // random  0 to 0.999999
+ console.log(randNum)
+ const num = Math.floor(Math.random () * 11) // random 0 and 10
+ console.log(num)
+// math matematiksel terimler içeren kütüphane
+// string ifadeler
+let firstName = 'Ayşe Hale'
+let lastName = 'Ardıç'
+let country = 'Türkiye'
+let city = 'Ankara'
+let languane = 'JavaScript, Türkçe'
+let job = 'Student'
+// concatenation birleştirme
+let fullName = firstName + '' + lastName;
+console.log(fullName)
+let paragraf = "Merhabalaar paragraf yazarken alt satıra ine bilmek için \
+işareti koyarak devam etmemiz gerekiyor teşekkürler"
+console.log(paragraf)
+// \n: aşşağı satıra inmemizi sağlar
+let deneme = "ayşe\nhale\nardıç"
+console.log(deneme)
+// kelimeyi ayırmak için \' koymak gerek
+let mycity = 'Ankara\'m'
+console.log(mycity)
+let room = 'salon\\mutfak\\kiler' //backslash
+//`${expression}`
+let myroom = `${room} 
+
+kimseye
+söyleme 
+hihihihihi
+${lastName}`// ikisinin arasına yazabiliyorum 
+console.log(myroom) 
+let a = 5
+let b = 4
+console.log(`${a*b}`)
+console.log(`${a<b}`)
+//length metodu kelimenin kaç karakter olduğunu bulur
+let komikisim = 'ayşedonsuz'
+console.log(komikisim.length)
+let dizi = ['s', 'a', 'n', 'd', 'a', 'l', 'y', 'e']
+console.log(dizi.length-1) //length uzunluk -1 
+let lastIndex = dizi.length-1
+console.log(lastIndex) // 7
+console.log(dizi[lastIndex]) // e harfini verir
+let buyukharf = 'yeterartık'
+console.log(buyukharf.toUpperCase())// büyük harf yapıyor hepsini
+let kucukharf = 'amaGERÇEKTENMİ'
+console.log(kucukharf.toLowerCase())// hepsi küçük harf
+let kacakac = 'helloWORD'
+console.log(kacakac.substr(5,4)) // sadece wordu yazdırır 5 den başla 4 karakteri al demek
+let diziyedonme = 'enektarlar koltuğun altında kalık'
+
