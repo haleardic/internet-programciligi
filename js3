@@ -1,0 +1,151 @@
+//Boolean
+let isLighOn = true
+let isHungry = false
+let isMarried = false
+let trueValue = 4 > 3 //true
+let falseValue = 3 > 4 //false
+
+// == değerin aynı olup olmadığına bakar
+// === hem değerin hem veri türünün aynı olup olmadığına bakıyor
+ 
+// length = uzunluk
+console.log('milk'.length == 'avocado'.length) //false
+
+//&&(ampersand) = ve
+//||(pipe) = veya
+//!(negation) = dğilse
+
+const check = 4 < 3 || 10 < 5 // false
+let isDoorOn = !false // isDoorof
+
+let isRaining = true
+isRaining
+console.log('you need a rain coat.')
+console.log('No need for a rain coat.')
+
+let result = 5 < 4 ? 'evet 5 küçüktür dörtten' : 'hayır senin matematik hocanı seveyim'
+
+//alert('artık sus lütfen') //uyarı kutucuğu
+//prompt('bir sayı girme sakın', 'sayı girme diyorumm') // uyarı kutucuğuna yazabilme
+//confirm('emin misin ?????')
+
+//day3
+// başına get geldiğinde zamanla alakalı bilgi
+// tarihler
+const date = new Date()
+console.log(date)
+console.log(date.getFullYear()) // 2024
+console.log(date.getTime())
+console.log(date.getMinutes()) 
+console.log(date.getMonth())
+console.log(date.getDay()) // 3
+
+//day4 koşullar
+
+/* 
+-if
+-if else
+-if else if else
+-switch
+-ternary operator
+*/
+
+//day5
+// Bir dizi değişkeni tanımlarken const daha çok kullanılıyor
+// const da atadığın bir değişkene yeni değer atayamazsın
+// Aynı isimle yeni bir değişken tanımlaymazsın
+
+//bir takım dizi olayları 
+let names = ['Hale', 25, 1999, 'Ardıç']
+console.log(names)
+/*
+0:"Hale"
+1:25
+2:1999
+3:"Ardıç"
+length:4
+*/
+
+console.log('AyşeHale'.split(''))
+//  ['A', 'y', 'ş', 'e', 'H', 'a', 'l', 'e']
+
+const webTechs = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'Reacth',
+    'Redux',
+    'Node',
+    'mongoDB'
+]
+ 
+// dizi değeri değiştirme
+const numbers = [1, 2, 3, 4, 5]
+numbers[0] = 15
+numbers[1] = 25
+console.log(numbers)
+// 15, 25, 3, 4, 5
+
+/*
+Array, length, concat, indexOf, slice, splice, join, toString, includes,
+lastIndexOf, isArray, fill, push, pop, shift, unshift
+*/
+
+const arr = Array() // boş bir dizi()
+const doluDizi = Array[8] // 8 elemanlı dizi
+const Hale = Array(3).fill('Haletoş')// 3 tane haletoş yazdırır değişmeyen
+console.log(Hale)
+
+// 2 Array i birleştirmek istediğimizde 'concat' metodu kullanıyoruz
+const bu3oldu = 'hale'
+const firstList = [1, 2, 3]
+const secondList = [4, 5, 6]
+const thirdList = firstList.concat(secondList, bu3oldu)
+console.log(thirdList)// 1,2,3,4,5,6
+// const thirdList = secondList.concat(firstList) 4,5,6,1,2,3
+// 1,2,3,4,5,6,hale
+
+console.log(thirdList.length) //length dizinin uzunluğunu verir
+
+//indexOf
+/*
+ bir elemanın dizide bulunup bulunmadığını kontrol ediyoruz 
+dizie bulunuyorsa o elemanın index değerini dönüyor
+yoksada -1 dönüyorr 
+*/
+
+console.log(thirdList.indexOf(5)) // 4
+console.log(thirdList.indexOf('ahmet'))
+
+// lastIndexOf bir dizide iki tane aynı eleman varsa 2. yerde en son geçtiği yeri söyler
+// includes büyük küçük harfe duyarlı
+ 
+console.log ( Array.isArray(names)) // array olup olmadığını kontrol ediyorum
+console.log ( typeof names) // oject
+
+console.log( numbers.toString()) // bir diziyi stringe çevirmek istediğinde
+
+//join
+const meyveler = ['portakal', 'mandalina', 'elma', 'armut']
+
+console.log(meyveler.join())
+// portakal,mandaline,elma
+
+console.log(meyveler.join(''))
+// portakalmandalinaelma
+
+console.log(meyveler.join(' '))
+// portakal mandalina elma
+
+console.log(meyveler.join(', '))
+// portakal, mandalina, elma
+
+console.log(meyveler.join(' # '))
+// portakal # mandalina # elma
+
+console.log(meyveler.slice(0)) // hepsini alıyor
+console.log(meyveler.slice(0,2)) // portakal, mandalina
+console.log(meyveler.slice(1,3)) // mandalina, elma
+//(0,1) 0 dan başla 1. elemanı sil
+
+//push dediğimizde dizinin sonuna ekleme yapıyoruz
