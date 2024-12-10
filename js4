@@ -1,0 +1,80 @@
+ // --------------day6 döngüler loops
+ for(let i = 0; i <=5; i++ ) {
+    console.log(i)
+ }
+
+  // 0 1 2 3 4 5
+
+  for(let i = 5; i >= 0; i--) {
+    console.log(i)
+  }
+
+  // 5 4 3 2 1 0
+
+for (let i = 1; i <= 5; i++) {
+    console.log(`${i} * ${i} = ${i * i}`)
+}
+
+/*
+ 1 * 1 = 1
+2 * 2 = 4
+3 * 3 = 9
+4 * 4 = 16
+5 * 5 = 25
+*/
+
+let numbers = [5, 10, 15]
+let sum = 0
+
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+}
+
+console.log('toplam =', sum)
+
+// toplam = 30
+// toLocaleUpperCase harfleri büyültür büyük i dikkar eder
+//toLocaleUpperCase('TR') türkçeleştirir
+
+// newArr referansız kopyalama
+
+let countries = ['turkey', 'cyprus', 'azerbaijan'] 
+let newCountries = []
+
+for (let i = 0; i < countries.length; i++) {
+    newCountries.push(countries[i].toLocaleUpperCase())
+}
+
+console.log(newCountries)
+
+// while true oldukça çalışıyor koşul yerine gelmezse çalışmaz
+// do while kodu bir kere çalıştırdıktan sonra koşula bakıyor 
+
+let i = 0
+while (i <= 5) {
+    console.log(i)
+    i++
+}
+
+// 0 1 2 3 4 5 
+
+let a = 6
+do {
+    console.log(a)
+    a++
+} while (a <= 5)
+
+// 6
+ 
+const names = ['Hale', 'Harun', 'Yaren', 'Duru', 'Zeynep', 'Mehmet']
+
+for (let name of names) {
+    if(name == 'Duru') {
+        //console.log(`${name} bulundu`)
+        //break // duruya kadar yazıyor
+        continue // Duru yu yazdırmıyor
+    }    
+    console.log('Ad', name)
+}
+
+// Duru ya kadar yazdırım döngünün ilerlemesini kesti
