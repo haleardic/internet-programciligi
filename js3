@@ -149,3 +149,35 @@ console.log(meyveler.slice(1,3)) // mandalina, elma
 //(0,1) 0 dan başla 1. elemanı sil
 
 //push dediğimizde dizinin sonuna ekleme yapıyoruz
+let names = ['Ayşe', 'Hale']
+
+console.log(names) // ayşe , hale
+ 
+names.push('Ardıç') // sona yeni eleman ekliyo
+
+console.log(names) // ayşe, hale, ardıç
+
+names.pop() // sondaki elemanı kaldırıyor
+
+console.log(names) //ayşe, hale
+
+names.shift() // baştaki elemanı çıkartır
+
+names.unshift('Yaren') // dizinin başına eleman ekler
+console.log(names)
+
+// reverse elemanları tersine çevirmek için kullanılıyor
+// split('') parçalayıp diziye çevirir
+console.log('Hale'.split('').reverse()) // ['e', 'l', 'a', 'H']
+console.log('Hale'.split('').reverse().join('')) //elaH
+
+const sıralama = [
+    'Hale',
+    'Ayşe',
+    'Selehattin',
+    'Aşkısıı',
+    'Tülin',
+    'Zerrin'
+]
+ console.log(sıralama.sort())
+ // sort a dan z ye sıralıyor
