@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="title" 
+         onmouseover="this.innerText = 'naberrr'" 
+         onmouseout="this.innerText = 'Eski Başlık'">
+        Eski Başlık
+    </div>
+    <div class="card-header">
+        <h3 class="card-title h1" id = "title">
+            merhaba
+        </h3>
+    </div>
+    
+    <ul id="task-list">
+        <li>
+            <input type="checkbox" class="task-checkbox"> Görev 1
+        </li>
+        <li>
+            <input type="checkbox" class="task-checkbox"> Görev 2
+        </li>
+        <li>
+            <input type="checkbox" class="task-checkbox"> Görev 3
+        </li>
+    </ul>
+    
+
+    <script>
+        let sonuc;
+       
+         
+        tasklist = document.getElementById("title");
+        ul = document.getElementById("task-list");
+        tasklist = document.getElementsByTagName("li");
+        for(let task of tasklist){
+            console.log(task);
+            task.style.color = "red";
+        }
+        let taskList = document.getElementsByClassName("task-checkbox");
+        
+        
+        for (let checkbox of taskList) {
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    checkbox.parentElement.style.color = "green"; 
+                } else {
+                    checkbox.parentElement.style.color = "black"; 
+                }
+            });
+        }
+
+        console.log(sonuc)
+    </script>
+</body>
+</html>
