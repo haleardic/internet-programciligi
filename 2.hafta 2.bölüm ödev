@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Input ile Görev Ekle ve Sil</title>
+    <style>
+        /* Liste öğeleri için varsayılan stil */
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Checkbox işaretlendiğinde arka plan renginin yeşil olması */
+        .checked {
+            background-color: rgb(226, 85, 19);
+        }
+
+        /* Checkbox işaretlenmediğinde varsayılan arka plan rengi */
+        .unchecked {
+            background-color: white;
+        }
+
+        /* Input ve buton stilleri */
+        #task-input {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #c78383;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        #add-task {
+            background-color: #ec977d;
+            color: white;
+        }
+
+        #remove-task {
+            background-color: #6bb7e2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Görev Listesi</h2>
+
+    <!-- Input alanı ve butonlar -->
+    <input type="text" id="task-input" placeholder="Görev adını girin...">
+    <button id="add-task">Görev Ekle</button>
+    <button id="remove-task">Seçili Görevleri Sil</button>
+
+    <!-- Görev listesi -->
+    <ul id="task-list">
+        <li class="unchecked">
+            <input type="checkbox" class="task-checkbox"> Görev 1
+        </li>
+        <li class="unchecked">
+            <input type="checkbox" class="task-checkbox"> Görev 2
+        </li>
+        <li class="unchecked">
+            <input type="checkbox" class="task-checkbox"> Görev 3
+        </li>
+    </ul>
+
+    <script>
+        // Gerekli elementleri seçiyoruz
+        const taskInput = document.getElementById("task-input");
+        const taskList = document.getElementById("task-list");
+        const addTaskButton = document.getElementById("add-task");
+        const removeTaskButton = document.getElementById("remove-task");
+
+        // Checkbox'lara arka plan rengi işlevselliği ekleme
+        function addCheckboxListener(checkbox) {
+            checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                    checkbox.parentElement.classList.add("checked");
+                    checkbox.parentElement.classList.remove("unchecked");
+                } else {
+                    checkbox.parentElement.classList.add("unchecked");
+                    checkbox.parentElement.classList.remove("checked");
+                }
+            });
+        }
+
+        // Görev ekleme
+        addTaskButton.addEventListener("click", function () {
+            const taskName = taskInput.value.trim(); // Input'tan görev adını alıyoruz
+            if (taskName) {
+                const li = document.createElement("li");
+                li.classList.add("unchecked");
+                li.innerHTML = <input type="checkbox" class="task-checkbox"> ${taskName};
+                taskList.appendChild(li);
+
+                // Yeni eklenen checkbox'a listener ekliyoruz
+                const checkbox = li.querySelector(".task-checkbox");
+                addCheckboxListener(checkbox);
+
+                // Input'u temizliyoruz
+                taskInput.value = "";
+            } else {
+                alert("Lütfen bir görev adı girin!");
+            }
+        });
+
+        // Seçili görevleri silme
+        removeTaskButton.addEventListener("click", function () {
+            const checkboxes = document.querySelectorAll(".task-checkbox:checked");
+            checkboxes.forEach((checkbox) => {
+                checkbox.parentElement.remove();
+            });
+        });
+
+        // Mevcut checkbox'lara listener ekleme
+        document.querySelectorAll(".task-checkbox").forEach(addCheckboxListener);
+    </script>
+</body>
+</html>
