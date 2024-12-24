@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox ve Arka Plan Rengi</title>
+    <style>
+        /* Liste öğeleri için varsayılan stil */
+        li {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Checkbox işaretlendiğinde arka plan renginin yeşil olması */
+        .checked {
+            background-color: lightgreen;
+        }
+
+        /* Checkbox işaretlenmediğinde varsayılan arka plan rengi */
+        .unchecked {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Görev Listesi</h2>
+    <ul id="task-list">
+        <li class="unchecked">
+            <input type="checkbox" class="task-checkbox"> Görev 1
+        </li>
+        <li class="unchecked">
+            <input type="checkbox" class="task-checkbox"> Görev 2
+        </li>
+        <li class="unchecked">
+            <input type="checkbox" class="task-checkbox"> Görev 3
+        </li>
+    </ul>
+
+    <script>
+        // Tüm checkbox'ları seçiyoruz
+        const checkboxes = document.getElementsByClassName("task-checkbox");
+
+        // Checkbox'lara event listener ekliyoruz
+        for (let checkbox of checkboxes) {
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    // Checkbox işaretliyse, arka plan rengi yeşil yapılır
+                    checkbox.parentElement.classList.add("checked");
+                    checkbox.parentElement.classList.remove("unchecked");
+                } else {
+                    // Checkbox işaretli değilse, varsayılan arka plan rengine dönülür
+                    checkbox.parentElement.classList.add("unchecked");
+                    checkbox.parentElement.classList.remove("checked");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
